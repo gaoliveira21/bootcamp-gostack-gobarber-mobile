@@ -1,11 +1,10 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import Test from '~/Test';
 // import { Container } from './styles';
 
-function App() {
-  return <Text>Hello</Text>;
-}
+const Test = () => {
+  return <Text>Test</Text>;
+};
 
-export default App;
+export default Test;
