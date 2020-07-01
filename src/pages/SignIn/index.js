@@ -3,8 +3,8 @@ import { Text } from 'react-native';
 
 // import { Container } from './styles';
 
-const Test = () => {
-  return <Text>Test</Text>;
+const SignIn = () => {
+  return <Text>Sign In</Text>;
 };
 
-export default Test;
+export default SignIn;
