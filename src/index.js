@@ -8,19 +8,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import './config/ReactotronConfig';
 
 import { store, persistor } from './store';
-import Routes from './routes';
+import App from './App';
 
-function App() {
+function Index() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <NavigationContainer>
           <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
-          <Routes />
+          <App />
         </NavigationContainer>
       </PersistGate>
     </Provider>
   );
 }
 
-export default App;
+export default Index;
