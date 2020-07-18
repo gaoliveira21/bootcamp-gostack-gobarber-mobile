@@ -17,6 +17,8 @@ const App = () => {
         keyboardHidesTabBar: true,
         style: {
           backgroundColor: '#8d41a8',
+          height: 60,
+          borderTopWidth: 0,
         },
         tabStyle: {
           padding: 5,
