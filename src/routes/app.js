@@ -40,7 +40,21 @@ function New() {
         name="SelectProvider"
         component={SelectProvider}
       />
-      <Stack.Screen name="SelectDateTime" component={SelectDateTime} />
+      <Stack.Screen
+        options={({ navigation }) => ({
+          title: 'Selecione o horário',
+          headerTitleAlign: 'center',
+          headerLeft: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate('SelectProvider')}
+            >
+              <Icon name="chevron-left" size={25} color="#fff" />
+            </TouchableOpacity>
+          ),
+        })}
+        name="SelectDateTime"
+        component={SelectDateTime}
+      />
       <Stack.Screen name="Confirm" component={Confirm} />
     </Stack.Navigator>
   );
