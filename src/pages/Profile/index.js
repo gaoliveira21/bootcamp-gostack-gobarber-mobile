@@ -9,9 +9,11 @@ import {
   FormInput,
   Separator,
   SubmitButton,
+  LogoutButton,
 } from './styles';
 
 import Background from '~/components/Background';
+import { signOut } from '~/store/modules/auth/actions';
 import { updateProfileRequest } from '~/store/modules/user/actions';
 
 const Profile = () => {
@@ -45,6 +47,10 @@ const Profile = () => {
         confirmPassword,
       })
     );
+  }
+
+  function handleLogout() {
+    dispatch(signOut());
   }
 
   return (
@@ -113,6 +119,10 @@ const Profile = () => {
           />
           <TouchableWithoutFeedback onPress={handleSubmit}>
             <SubmitButton>Atualizar perfil</SubmitButton>
+          </TouchableWithoutFeedback>
+
+          <TouchableWithoutFeedback onPress={handleLogout}>
+            <LogoutButton>Sair do GoBarber</LogoutButton>
           </TouchableWithoutFeedback>
         </Form>
       </Container>
