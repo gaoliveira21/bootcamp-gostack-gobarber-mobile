@@ -45,9 +45,7 @@ function New() {
           title: 'Selecione o horário',
           headerTitleAlign: 'center',
           headerLeft: () => (
-            <TouchableOpacity
-              onPress={() => navigation.navigate('SelectProvider')}
-            >
+            <TouchableOpacity onPress={() => navigation.goBack()}>
               <Icon name="chevron-left" size={25} color="#fff" />
             </TouchableOpacity>
           ),
