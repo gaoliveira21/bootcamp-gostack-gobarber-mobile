@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { formatRelative, parseISO } from 'date-fns';
 import pt from 'date-fns/locale/pt';
+import { StackActions } from '@react-navigation/native';
 import PropTypes from 'prop-types';
 
 import api from '~/services/api';
@@ -24,6 +25,7 @@ const Confirm = ({ route, navigation }) => {
       date: time,
     });
 
+    navigation.dispatch(StackActions.replace('SelectProvider'));
     navigation.navigate('Dashboard');
   }
 
@@ -63,6 +65,7 @@ Confirm.propTypes = {
   }).isRequired,
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
+    dispatch: PropTypes.func,
   }).isRequired,
 };
 

@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+
 import api from '~/services/api';
 
 import { Container, Title, List } from './styles';
@@ -9,7 +11,7 @@ import Appointment from '~/components/Appointment';
 const Dashboard = () => {
   const [appointments, setAppointments] = useState([]);
 
-  useEffect(() => {
+  useFocusEffect(() => {
     async function loadAppointments() {
       const response = await api.get('appointments');
 
